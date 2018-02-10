@@ -76,19 +76,29 @@
 
 
 $(document).ready(function() {
+  var data = $.ajax({
+    async: false,
+    url: 'http://apigateway.ryanair.com/pub/v1/core/3/cities?apikey=mBZ3XsuiZc6cuqT0cu8xPJt50wZcqxRG',
+    cache: false,
+    dataType: 'json',
+    type:"GET", // Type of a method, "get" by default.
+    data: null, // Request payload of a method, "null" by default.
+    contentType: "application/x-www-form-urlencoded;charset=utf-8",
+    processData: true,
+   }).responseJSON;
+   
   
+  var cities =['Wybierz miasto...'];
+  for( var i=0; i<data.length; i++){
+       cities.push(data[i].name);  
+   }
+
+
   $('#selectArrival').select2({
-    placeholder: {
-      id: '0', // the value of the option
-      text: 'Wybierz cel podróży ...'
-    }
+    data: cities,
   });
   $('#selectDeparture').select2({
-    placeholder: {
-      id: '0', // the value of the option
-      text: 'Wybierz cel podróży ...'
-    }
-
+    data: cities,
   });
   
   $( "#datepicker1" ).datepicker();
