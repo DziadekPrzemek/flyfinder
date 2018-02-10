@@ -1,0 +1,30 @@
+{
+  "name": "startbootstrap-creative",
+  "description": "Creative is a stylish one page HTML theme for Bootstrap.",
+  "main": "",
+  "authors": [
+    "David Miller (http://davidmiller.io/)"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "css",
+    "sass",
+    "html",
+    "responsive",
+    "theme",
+    "template"
+  ],
+  "homepage": "https://github.com/BlackrockDigital/startbootstrap-creative",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "eonasdan-bootstrap-datetimepicker": "^4.17.47",
+    "bootstrap": "^4.0.0",
+    "select2": "^4.0.5"
+  }
+}
